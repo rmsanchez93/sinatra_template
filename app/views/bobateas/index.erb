@@ -1,6 +1,11 @@
-<h1> Emily and Hadi's drink list</h1>
+<h1> This is the index page for Bobateas</h1>
+
 <ul>
-<% @bobateas.each do |bobatea| %>
-<li> <%= bobatea.name %> by <%=bobatea.bobashop.name%> </li>
+<% @bobateas.each do |bobatea| %>  
+    <a href="/bobateas/<%=bobatea.id%>" > <li> <%=bobatea.name %></li></a>
 <% end %>
 </ul>
+
+<br>
+
+<a href="/create_drink">Create a Drink</a>

@@ -1,0 +1,10 @@
+<h1> Drink Name: <%= @bobatea.name %> </h1>
+<h2> Topping: <%= @bobatea.topping %> </h2>
+<h2> Drink Type: <%= @bobatea.drink_type %> </h2>
+<h2> Price: <%= @bobatea.price %> </h2>
+
+<ul>
+<% @bobateas.each do |bobatea| %>
+    <li> <%= bobatea.name %> </li>
+    <% end %>
+</ul>

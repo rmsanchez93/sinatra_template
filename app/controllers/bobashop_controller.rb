@@ -9,4 +9,9 @@ class BobashopController < ApplicationController
         @bobashop = Bobashop.find(params[:id])
         erb :'bobashops/show'
     end
+
+    post 'bobashops' do
+    @bobashop = Bobashop.create(name: params['name'], location: params['location'])
+    redirect "bobashops/#{@bobashop.id}"
+    end
 end

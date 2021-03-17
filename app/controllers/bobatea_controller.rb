@@ -4,15 +4,19 @@ class BobateaController < ApplicationController
         @bobateas = Bobatea.all
         erb :'bobateas/index'
     end
-
-    get "/bobateas/new" do
-        @bobashops = Bobashop.all
-        erb :'bobateas/new'
-    end
     
+    get '/bobateas/:id' do
+        @bobatea = Bobatea.find(params[:id])
+        erb :'bobateas/show'
+    end
+
+    get '/create_drink' do
+        erb :'bobateas/create_drink'
+    end
+
     post '/bobateas' do
         @bobatea = Bobatea.create(params)
-        redirect "/bobashops/#{@bobatea.bobashop_id}"
+        redirect "/bobateas/#{@bobatea.bobashop_id}"
     end
 
 end
