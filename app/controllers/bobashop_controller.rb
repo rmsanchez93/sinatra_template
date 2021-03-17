@@ -1,7 +1,8 @@
 class BobashopController < ApplicationController
 
-    get "/bobashops" do
-        "this is a list of bobashops"
+    get '/bobashops' do
+        @bobashops = Bobashop.all
+        erb :'bobashops/index'
     end
     
 end
