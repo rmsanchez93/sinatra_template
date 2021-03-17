@@ -1,0 +1,7 @@
+<h1> This is the index page for Bobashops</h1>
+
+<ul>
+<% @bobashops.each do |bobashop| %>
+<a href="/bobashops/<%=bobashop.id%>" > <li> <%=bobashop.name %> </li></a>
+<% end %>
+</ul>
