@@ -1,0 +1,10 @@
+<h1>Welcome to <%= @bobashop.name %> </h1>
+<h2> Located in <%= @bobashop.location %>, Texas </h2>
+<hr/>
+
+<ul>
+<% @bobashop.bobateas.each do | bobatea | %>
+    <li> <%= bobatea.name %> </li>
+    <% end %>
+    </ul>
+
