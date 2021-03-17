@@ -1,0 +1,6 @@
+<h1> Emily and Hadi's drink list</h1>
+<ul>
+<% @bobateas.each do |bobatea| %>
+<li> <%= bobatea.name %> by <%=bobatea.bobashop.name%> </li>
+<% end %>
+</ul>
